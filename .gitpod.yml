@@ -1,0 +1,12 @@
+ports:
+  - port: 3000
+    onOpen: open-preview
+tasks:
+  - init: >
+      pipenv install --dev
+      pipenv install -e .
+      export FLASK_APP=src/flask_app.py;
+      export FLASK_ENV=development;
+  - command: > 
+      pipenv shell;
+      flask run -p 3000
