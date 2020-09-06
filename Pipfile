@@ -5,6 +5,10 @@ verify_ssl = true
 
 [dev-packages]
 pytest = "*"
+pipenv = "*"
+install = "*"
+export = "*"
+pytest-testdox = "*"
 
 [packages]
 flask = "*"
