@@ -3,10 +3,10 @@ ports:
     onOpen: open-preview
 tasks:
   - init: >
-      pipenv install --dev
-      pipenv install -e .
-      pipenv export FLASK_APP=src/flask_app.py;
-      pipenv export FLASK_ENV=development;
+      pipenv install --dev;
+      pipenv install -e .;
+      pipenv run export FLASK_APP=src/flask_app.py;
+      pipenv run export FLASK_ENV=development;
     command: > 
       pipenv shell;
-      pipenv python3 flask run -p 3000
+      flask run -p 3000;
